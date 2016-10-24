@@ -1,0 +1,28 @@
+{
+  "name": "pm2-logmatic",
+  "version": "0.0.1",
+  "description": "Forward logs to logmatic.io",
+  "main": "app.js",
+  "dependencies": {
+    "pm2": "^2.0.18",
+    "pmx": "^0.6.8",
+    "winston": "^2.2.0",
+    "winston-logstash": "^0.2.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keymetrics/pmx.git"
+  },
+  "config": {
+    "key": ""
+  },
+  "apps": [
+    {
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "app.js"
+    }
+  ],
+  "author": "Keymetrics Inc.",
+  "license": "MIT"
+}
